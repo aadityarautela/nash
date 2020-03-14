@@ -15,13 +15,11 @@
 void nash_loop(void) {
   char *line;
   char **args;
-  char cwd[PATH_MAX];
   int status;
   struct utsname uname_data;  // required for username and system name
   uname(&uname_data);
   do {
-    getcwd(cwd, sizeof(cwd));
-    printf("%s@%s| %s |-> ", uname_data.nodename, uname_data.sysname, cwd);
+    printf("%s> ", uname_data.nodename);
     line = nash_read_line();
     args = nash_split_line(line);
     status = nash_exec(args);

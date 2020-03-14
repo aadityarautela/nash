@@ -9,4 +9,4 @@
 #include "includes/common.h"
 #include "includes/input.h"
 
-void main() { nash_loop(); }
+int main() { nash_loop(); }

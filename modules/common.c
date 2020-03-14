@@ -63,6 +63,7 @@ int cd(char **args) {
 int help(char **args) {
   printf("Aaditya Rautela's nash\n");
   printf("Builtin commands are cd,help,pwd and exit\n");
+  return 1;
 }
 
 int pwd(char **args) {
